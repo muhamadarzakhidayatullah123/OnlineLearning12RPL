@@ -47,7 +47,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.UserViewHolder
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent dea = new Intent(holder.itemView.getContext(), Detail.class);
+                Intent dea = new Intent(holder.itemView.getContext(), EditActivity.class);
                 dea.putExtra("id", dataList.get(position).getId());
                 dea.putExtra("nama", dataList.get(position).getNama());
                 dea.putExtra("email", dataList.get(position).getEmail());
