@@ -88,7 +88,17 @@ public class ListData extends AppCompatActivity {
 
                             }
 
-                            adapter = new DataAdapter(datalist);
+                            adapter = new DataAdapter(datalist, new DataAdapter.Callback() {
+                                @Override
+                                public void onClick(int position) {
+                                    Toast.makeText(ListData.this, datalist.get(position).getNama(), Toast.LENGTH_SHORT).show();
+                                }
+
+                                @Override
+                                public void test() {
+
+                                }
+                            });
 
                             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListData.this);
 

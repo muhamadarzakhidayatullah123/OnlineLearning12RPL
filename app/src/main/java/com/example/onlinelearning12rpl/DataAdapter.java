@@ -21,13 +21,22 @@ import com.bumptech.glide.request.target.Target;
 
 import java.util.ArrayList;
 
+import javax.security.auth.callback.Callback;
+
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.UserViewHolder> {
 
     private ArrayList<Model> dataList;
     View viewku;
+    private Callback callback;
 
-    public DataAdapter(ArrayList<Model> dataList) {
+    interface Callback {
+        void onClick(int position);
+        void test();
+    }
+
+    public DataAdapter(ArrayList<Model> dataList, Callback callback) {
         this.dataList = dataList;
+        this.callback = callback;
     }
 
     @NonNull
@@ -47,14 +56,15 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.UserViewHolder
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent dea = new Intent(holder.itemView.getContext(), EditActivity.class);
-                dea.putExtra("id", dataList.get(position).getId());
-                dea.putExtra("nama", dataList.get(position).getNama());
-                dea.putExtra("email", dataList.get(position).getEmail());
-                dea.putExtra("nohp", dataList.get(position).getNohp());
-                dea.putExtra("alamat", dataList.get(position).getAlamat());
-                dea.putExtra("noktp", dataList.get(position).getNoktp());
-                holder.itemView.getContext().startActivity(dea);
+                callback.onClick(position);
+//                Intent dea = new Intent(holder.itemView.getContext(), EditActivity.class);
+//                dea.putExtra("id", dataList.get(position).getId());
+//                dea.putExtra("nama", dataList.get(position).getNama());
+//                dea.putExtra("email", dataList.get(position).getEmail());
+//                dea.putExtra("nohp", dataList.get(position).getNohp());
+//                dea.putExtra("alamat", dataList.get(position).getAlamat());
+//                dea.putExtra("noktp", dataList.get(position).getNoktp());
+//                holder.itemView.getContext().startActivity(dea);
             }
         });
     }
