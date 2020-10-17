@@ -62,7 +62,7 @@ public class Registrasi extends AppCompatActivity {
                 String alamat = txtalamat.getText().toString().trim();
                 progressBar.setTitle("Register...");
                 progressBar.show();
-                AndroidNetworking.post("http://192.168.6.204/PTS/Registrasi.php")
+                AndroidNetworking.post("http://192.168.43.79/login_costumer/Registrasi.php")
                         .addBodyParameter("email", email)
                         .addBodyParameter("password", password)
                         .addBodyParameter("nama", nama)
@@ -110,7 +110,7 @@ public class Registrasi extends AppCompatActivity {
         tvlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Registrasi.this, Registrasi.class);
+                Intent intent = new Intent(Registrasi.this, MainActivity.class);
                 startActivity(intent);
             }
         });

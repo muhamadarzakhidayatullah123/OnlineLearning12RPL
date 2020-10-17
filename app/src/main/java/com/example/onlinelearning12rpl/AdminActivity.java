@@ -56,7 +56,7 @@ public class AdminActivity extends AppCompatActivity {
                 };
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setMessage("Apakah anda yakin ingin keluar?").setPositiveButton("Ya", dialog)
+                builder.setMessage("yakin ingin keluar?").setPositiveButton("Ya", dialog)
                         .setNegativeButton("Tidak", dialog).show();
 
             }

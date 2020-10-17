@@ -59,7 +59,7 @@ public class EditActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AndroidNetworking.post("http://192.168.6.204/PTS/EditCustomer.php")
+                AndroidNetworking.post("http://192.168.43.79/login_costumer/EditCustomer.php")
                         .addBodyParameter("id", id)
                         .addBodyParameter("email", edEmail.getText().toString())
                         .addBodyParameter("nama", edNmaLengkap.getText().toString())

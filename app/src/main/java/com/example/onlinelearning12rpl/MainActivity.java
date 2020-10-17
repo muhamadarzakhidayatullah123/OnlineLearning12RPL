@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = txtpassword.getText().toString();
                 PB.setTitle("Login...");
                 PB.show();
-                AndroidNetworking.post("http://192.168.6.204/PTS/Login.php")
+                AndroidNetworking.post("http://192.168.43.79/login_costumer/Login.php")
                         .addBodyParameter("email" , email)
                         .addBodyParameter("password" , password)
                         .setPriority(Priority.LOW)

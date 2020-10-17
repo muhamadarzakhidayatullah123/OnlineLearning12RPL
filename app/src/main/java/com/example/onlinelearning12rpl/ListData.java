@@ -63,7 +63,7 @@ public class ListData extends AppCompatActivity {
         datalist = new ArrayList<>();
         Log.d("test", "onCreate: ");
 
-        AndroidNetworking.post("http://192.168.6.204/PTS/getAllCustomer.php")
+        AndroidNetworking.post("http://192.168.43.79/login_costumer/getAllCustomer.php")
                 .addBodyParameter("roleuser", "2")
                 .setTag("test")
                 .setPriority(Priority.MEDIUM)

@@ -118,13 +118,14 @@
 
     <TextView
         android:id="@+id/tvlogin"
-        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Already registered ? Sign in"
-        android:textSize="15dp"
+        android:text="sudah punya akun? masuk"
+        android:textSize="20dp"
         android:textColor="@color/colorPrimary"
         android:gravity="center"
         android:layout_marginTop="40dp"/>
+
+
 
 </LinearLayout>
