@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Detail"></activity>
+        <activity android:name=".TambahSepeda">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Detail" />
         <activity android:name=".EditActivity" />
         <activity android:name=".AdminActivity" />
         <activity android:name=".CustomerActivity" />
@@ -20,11 +27,7 @@
         <activity android:name=".Registrasi" />
         <activity android:name=".ListData" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

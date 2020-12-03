@@ -32,7 +32,7 @@ public class EditActivity extends AppCompatActivity {
         edNoKtp = findViewById(R.id.edNoKtp1);
         edNoHp = findViewById(R.id.edNoHp1);
         edAlamat = findViewById(R.id.edAlamat1);
-        btnUpdate = findViewById(R.id.btnUpdate);
+        btnUpdate = findViewById(R.id.simpanitem);
 
         Bundle extras = getIntent().getExtras();
 
@@ -43,11 +43,11 @@ public class EditActivity extends AppCompatActivity {
         final String nohp = extras.getString("nohp");
         final String alamat = extras.getString("alamat");
 
-        edEmail.setText(email);
-        edNmaLengkap.setText(nama);
-        edNoKtp.setText(noktp);
-        edNoHp.setText(nohp);
-        edAlamat.setText(alamat);
+//        edEmail.setText(email);
+//        edNmaLengkap.setText(nama);
+//        edNoKtp.setText(noktp);
+//        edNoHp.setText(nohp);
+//        edAlamat.setText(alamat);
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -100,5 +100,7 @@ public class EditActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
 }
